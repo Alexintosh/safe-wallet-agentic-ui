@@ -1,0 +1,21 @@
+{
+  "name": "agent-safe",
+  "version": "0.1.10+codex.20260910165956",
+  "description": "Operate Safe multisigs with autonomous Anvil simulation and local wallet signing.",
+  "author": {
+    "name": "Local developer"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Agent Safe",
+    "shortDescription": "Independent Safe operations with verified forks.",
+    "longDescription": "Prepare immutable Safe proposals, receive a signing link immediately, optionally simulate on Anvil, share signer handoffs, and collect EIP-712 signatures or native approveHash approvals.",
+    "developerName": "Local developer",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": "Use Agent Safe to inspect my Safe and prepare a transaction."
+  }
+}

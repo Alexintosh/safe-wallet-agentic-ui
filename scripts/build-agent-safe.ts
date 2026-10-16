@@ -1,0 +1,11 @@
+import { cp, mkdir, writeFile } from "node:fs/promises";
+import { resolve, join } from "node:path";
+const root = resolve(import.meta.dir, "..");
+const plugin = join(root, "plugins/agent-safe");
+await mkdir(join(plugin, "assets/web"), { recursive: true });
+const server = await Bun.build({ entrypoints: [join(root, "apps/agent-safe/src/main.ts")], target: "bun", outdir: join(plugin, "scripts"), naming: "agent-safe.js", minify: false });
+if (!server.success) throw new Error(server.logs.join("\n"));
+const ui = await Bun.build({ entrypoints: [join(root, "apps/agent-safe-web/src/main.ts")], target: "browser", outdir: join(plugin, "assets/web"), naming: "main.js", minify: true });
+if (!ui.success) throw new Error(ui.logs.join("\n"));
+for (const file of ["index.html", "src/styles.css"]) await cp(join(root, "apps/agent-safe-web", file), join(plugin, "assets/web", file.split("/").at(-1)!));
+console.log(JSON.stringify({ plugin, runtime: server.outputs.map(o => ({ path: o.path, size: o.size })), ui: ui.outputs.map(o => ({ path: o.path, size: o.size })) }));

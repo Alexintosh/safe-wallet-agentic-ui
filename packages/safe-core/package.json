@@ -1,0 +1,11 @@
+{
+  "name": "@agent-safe/safe-core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "@safe-global/protocol-kit": "8.0.4",
+    "viem": "2.55.1"
+  }
+}

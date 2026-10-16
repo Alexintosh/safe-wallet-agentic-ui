@@ -1,0 +1,10 @@
+{
+  "name": "@agent-safe/safe-fork",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "viem": "2.55.1"
+  }
+}

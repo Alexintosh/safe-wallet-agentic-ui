@@ -1,0 +1,1 @@
+{"name":"@agent-safe/runtime","version":"0.1.10","private":true,"type":"module","dependencies":{"elysia":"1.4.29","@elysia/openapi":"1.4.15","viem":"2.55.1"}}

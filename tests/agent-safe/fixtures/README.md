@@ -1,0 +1,5 @@
+Contract deployment code/storage extracted from Cyfrin LocalSafe's anvil-safe-state.json at commit 36fff6d5fbd13418d6942c932bb6170a85fa2853 (2026-09-09). MIT notice in LOCALSAFE-LICENSE.txt. Source: https://github.com/Cyfrin/localsafe.eth . No user balances, transactions or private keys included. Tests install these contracts only on a disposable loopback Anvil, then deploy fresh 1.4.1 Safe proxies. Canonical singleton bytecode is checked against pinned official safe-deployments hashes by production inspection.
+
+Safe 1.3 bytecode in safe-130-contracts.json was read with eth_getCode from a public Ethereum RPC on 2026-09-10. Every entry was verified against canonical/eip155 runtime code hashes in @safe-global/safe-deployments 1.37.60 before inclusion. Source contract license: SAFE-CONTRACTS-LICENSE.txt (upstream safe-global/safe-smart-account v1.3.0). No chain state is imported beyond contract runtime code.
+
+TestToken.sol is a disposable local fixture compiled with solc 0.8.24, optimizer enabled, EVM paris. Its committed ABI/bytecode is test-token.json. It is never deployed by the product.

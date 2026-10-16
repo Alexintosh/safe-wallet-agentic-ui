@@ -1,0 +1,1 @@
+{"extends":"./tsconfig.json","compilerOptions":{"lib":["ESNext","DOM"],"paths":{}},"include":["apps/agent-safe/**/*.ts","apps/agent-safe-web/src/**/*.ts","packages/safe-core/**/*.ts","packages/safe-fork/**/*.ts","packages/agent-safe-application/**/*.ts","packages/agent-safe-storage/**/*.ts","tests/agent-safe/**/*.ts"]}

@@ -1,0 +1,11 @@
+{
+  "name": "@agent-safe/web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "bun build src/main.ts --target browser --outdir build"
+  },
+  "dependencies": {
+    "viem": "2.55.1"
+  }
+}
